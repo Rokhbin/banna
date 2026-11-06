@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F4EC">
+  <title>banna | Your page, built in front of your visitors</title>
+  <meta name="description" content="banna is an open source script by Mohammadreza Rokhbin: a crew of cursors builds your page in front of your visitors. One file, no dependencies.">
+  <meta name="author" content="Mohammadreza Rokhbin">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="fa" href="../">
+  <script src="../../banna.js" data-colors="#D9572B,#2F5BEA,#0E9F8A,#B5387A,#C98A00,#5B4BD6,#1D2340"></script>
+  <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/demo.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#"><img src="../assets/favicon.svg" alt="" width="28" height="28">banna <small lang="fa">بنّا</small></a>
+      <nav class="nav" aria-label="Menu">
+        <a class="hide-phone" href="#anywhere">Examples</a>
+        <a class="hide-phone" href="#use">Use it</a>
+        <a class="hide-phone" href="#author">Author</a>
+        <a href="https://github.com/Rokhbin/banna" rel="noopener">GitHub</a>
+        <a href="../" hreflang="fa" lang="fa">فارسی</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <a class="byline" href="https://rokhbin.ir" rel="author"><b>MR</b>An open source script by Mohammadreza Rokhbin</a>
+          <h1>Your page, built <em>in front of</em> your visitors.</h1>
+          <p class="lead">A crew of cursors builds your site piece by piece: drawing boxes, typing text and clicking buttons into place. The first screen builds right away, the rest as you scroll.</p>
+          <div class="actions">
+            <a class="btn btn-solid" href="https://github.com/Rokhbin/banna" rel="noopener">Get it on GitHub</a>
+            <button class="btn" id="replay" type="button">Build it again</button>
+          </div>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mock-bar"><span></span><span></span><span></span></div>
+          <div class="mock-body">
+            <div class="mock-img"></div>
+            <h3>Any site can do this</h3>
+            <p>No changes to your page. Add one line to the top and you're done.</p>
+            <div class="mock-row"><div></div><div></div><div></div></div>
+            <span class="mock-btn">Start</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="anywhere">
+      <div class="wrap">
+        <p class="kicker">On any site</p>
+        <h2>A shop, a blog or a sign-up page</h2>
+        <p class="intro">banna works out by itself which parts are boxes, which are text and which are buttons. You don't need to mark anything.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="product" role="img" aria-label="Product photo"></div>
+            <span class="tag">Shop</span>
+            <h3>Handmade clay mug</h3>
+            <p>Orange glaze, made in a small workshop.</p>
+            <p class="price">$24</p>
+            <button class="btn btn-solid" type="button">Add to cart</button>
+          </article>
+          <article class="card">
+            <span class="tag">Blog</span>
+            <h3>Why simple sites get noticed</h3>
+            <p>A page that opens fast and says one thing clearly keeps its visitors. Three simple ideas to start with.</p>
+            <a class="btn" href="#anywhere">Read more</a>
+          </article>
+          <article class="card">
+            <span class="tag">Sign up</span>
+            <h3>Newsletter</h3>
+            <p>One email a month, no ads.</p>
+            <label class="field">Your email<input type="email" placeholder="you@example.com" autocomplete="email"></label>
+            <button class="btn btn-solid" type="button">Subscribe</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="use">
+      <div class="wrap">
+        <p class="kicker">Use it</p>
+        <h2>Just one line</h2>
+        <p class="intro">banna is one file, with no dependencies and no build step. It doesn't need a framework either.</p>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Put this line in your &lt;head&gt;</h3>
+              <p>Ideally before your stylesheets, without defer or async.</p>
+              <div class="code"><pre><code><span class="k">&lt;script</span> src=<span class="s">"https://cdn.jsdelivr.net/gh/Rokhbin/banna@1/banna.js"</span><span class="k">&gt;&lt;/script&gt;</span></code></pre><button class="copy" type="button" data-done="Copied" data-fail="Couldn't copy">Copy</button></div>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <div>
+              <h3>That's it. Open your page</h3>
+              <p>If you'd rather host the file yourself, take banna.js from GitHub and change the address.</p>
+            </div>
+          </li>
+        </ol>
+
+        <table class="options">
+          <thead><tr><th>Option</th><th>Default</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td><code>data-speed</code></td><td><code>1</code></td><td>Build speed. Higher is faster.</td></tr>
+            <tr><td><code>data-agents</code></td><td>8, or 4 on phones</td><td>Number of cursors.</td></tr>
+            <tr><td><code>data-once="session"</code></td><td>off</td><td>Play once per browser session.</td></tr>
+            <tr><td><code>data-colors</code></td><td>seven colors</td><td>Cursor colors, separated by commas.</td></tr>
+            <tr><td><code>data-banna-skip</code></td><td></td><td>Put it on any part, and banna leaves it alone.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">Safe to use</p>
+        <h2>It doesn't break anything</h2>
+        <div class="promises">
+          <div class="promise"><h3>Your text is never rewritten</h3><p>It only hides and reveals. Search engines still read the whole page.</p></div>
+          <div class="promise"><h3>Nothing is sent anywhere</h3><p>No trackers, and no requests to other sites.</p></div>
+          <div class="promise"><h3>Nobody is kept waiting</h3><p>Visitors can skip with the button or Esc, and it never runs for people who ask for reduced motion.</p></div>
+          <div class="promise"><h3>If it fails, your page is still there</h3><p>Whatever goes wrong, the page appears in full right away.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="author">
+      <div class="wrap">
+        <p class="kicker">Author</p>
+        <h2>Who made banna?</h2>
+        <div class="author">
+          <div class="monogram" aria-hidden="true">MR</div>
+          <div>
+            <h3>Mohammadreza Rokhbin</h3>
+            <p>Programmer and information security specialist, with 23 years of experience. I wrote banna from scratch so anyone can build their site in front of their visitors. It's free to use.</p>
+            <div class="author-links">
+              <a class="main" href="https://rokhbin.ir" rel="author">rokhbin.ir</a>
+              <a href="https://github.com/Rokhbin" rel="noopener">GitHub</a>
+              <a href="https://www.instagram.com/rokhbin/" rel="noopener">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>banna, MIT license</span>
+      <span>Made by <a href="https://rokhbin.ir" rel="author">Mohammadreza Rokhbin</a></span>
+    </div>
+  </footer>
+</body>
+</html>
